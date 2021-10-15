@@ -2277,7 +2277,7 @@ GameObject:
   - component: {fileID: 8417107622901318805}
   - component: {fileID: 198330687765394948}
   m_Layer: 0
-  m_Name: PressableButton (1)
+  m_Name: Inventory
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2883,7 +2883,7 @@ GameObject:
   - component: {fileID: 198330688019748902}
   - component: {fileID: 4608150572050164969}
   m_Layer: 0
-  m_Name: PressableButton
+  m_Name: GameSelector
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3401,7 +3401,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 43dd9399dc5f3eb4b844a5cb197bd037, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _gameSelector: {fileID: 0}
+  _gameObject: {fileID: 0}
 --- !u!1 &7562151487006739919
 GameObject:
   m_ObjectHideFlags: 0
@@ -4722,7 +4722,7 @@ GameObject:
   - component: {fileID: 8417107624419082317}
   - component: {fileID: 198330688543388380}
   m_Layer: 0
-  m_Name: PressableButton (2)
+  m_Name: Clear Objects
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

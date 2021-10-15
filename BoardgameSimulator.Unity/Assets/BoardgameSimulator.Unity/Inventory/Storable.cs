@@ -30,11 +30,12 @@ public class Storable : MonoBehaviour
         parent.GetComponent<ButtonConfigHelper>().MainLabelText = gameObject.name;
     }
 
-    public void RemoveFromInventory()
+    public void RemoveFromInventory(Transform parent)
     {
         transform.SetParent(_sceneContentTransform.transform, true);
         transform.localScale = _originalScale;
-        transform.localRotation = Quaternion.Euler(Vector3.zero);
+        transform.localPosition = parent.forward * 0.2f;
+        transform.localRotation = parent.rotation;
         gameObject.AddComponent<Rigidbody>().useGravity = false;
         gameObject.AddComponent<ObjectManipulator>();
     }

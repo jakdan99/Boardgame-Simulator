@@ -32,7 +32,7 @@ namespace BoardgameSimulator.Unity.HandMenus
 
         private void RemoveItem(GameObject item)
         {
-            _storedItems[item].GetComponent<Storable>().RemoveFromInventory();
+            _storedItems[item].GetComponent<Storable>().RemoveFromInventory(item.transform);
             Destroy(item);
             GetComponentInChildren<GridObjectCollection>().UpdateCollection();
         }
