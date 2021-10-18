@@ -6,13 +6,13 @@ using UnityEngine;
 
 public class Storable : MonoBehaviour
 {
-    [SerializeField] private Transform _sceneContentTransform = default!;
+    [SerializeField] private Transform _gamePieceContainer = default!;
 
     private Vector3 _originalScale;
 
     private void Awake()
     {
-        if (_sceneContentTransform == null) throw new InvalidOperationException("SceneContentTransform should not be null");
+        if (_gamePieceContainer == null) throw new InvalidOperationException("GamePieceContainer should not be null");
     }
 
     public void PlaceInInventory(GameObject parent)
@@ -33,7 +33,7 @@ public class Storable : MonoBehaviour
 
     public void RemoveFromInventory(Transform parent)
     {
-        transform.SetParent(_sceneContentTransform.transform, true);
+        transform.SetParent(_gamePieceContainer.transform, true);
         transform.localScale = _originalScale;
         transform.localPosition -= parent.forward * 0.1f;
         transform.localRotation = parent.rotation;

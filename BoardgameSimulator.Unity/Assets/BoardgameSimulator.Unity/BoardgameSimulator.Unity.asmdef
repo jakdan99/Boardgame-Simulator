@@ -1,6 +1,5 @@
 {
     "name": "BoardgameSimulator.Unity",
-    "rootNamespace": "",
     "references": [
         "Unity.TextMeshPro",
         "Microsoft.MixedReality.Toolkit.SDK",
