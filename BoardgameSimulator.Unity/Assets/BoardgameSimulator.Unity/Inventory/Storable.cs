@@ -1,6 +1,7 @@
 using Microsoft.MixedReality.Toolkit;
 using Microsoft.MixedReality.Toolkit.UI;
 using System;
+using TMPro;
 using UnityEngine;
 
 public class Storable : MonoBehaviour
@@ -24,17 +25,17 @@ public class Storable : MonoBehaviour
         transform.SetParent(parent.transform, false);
 
         var scaleToFit = GetComponent<Collider>().bounds.GetScaleToFitInside(parent.GetComponent<Collider>().bounds);
-        transform.localScale *= scaleToFit * 0.25f;
+        transform.localScale *= scaleToFit;
         transform.localRotation = Quaternion.Euler(Vector3.zero);
         transform.localPosition = Vector3.zero;
-        parent.GetComponent<ButtonConfigHelper>().MainLabelText = gameObject.name;
+        parent.GetComponentInChildren<TextMeshPro>().text = gameObject.name;
     }
 
     public void RemoveFromInventory(Transform parent)
     {
         transform.SetParent(_sceneContentTransform.transform, true);
         transform.localScale = _originalScale;
-        transform.localPosition = parent.forward * 0.2f;
+        transform.localPosition -= parent.forward * 0.1f;
         transform.localRotation = parent.rotation;
         gameObject.AddComponent<Rigidbody>().useGravity = false;
         gameObject.AddComponent<ObjectManipulator>();

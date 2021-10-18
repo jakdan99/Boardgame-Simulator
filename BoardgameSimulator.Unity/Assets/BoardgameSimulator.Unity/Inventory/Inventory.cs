@@ -2,9 +2,10 @@ using Microsoft.MixedReality.Toolkit.UI;
 using Microsoft.MixedReality.Toolkit.Utilities;
 using System;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
-namespace BoardgameSimulator.Unity.HandMenus
+namespace BoardgameSimulator.Unity.Inventory
 {
     public class Inventory : MonoBehaviour
     {
@@ -18,16 +19,17 @@ namespace BoardgameSimulator.Unity.HandMenus
 
         private void OnCollisionEnter(Collision other)
         {
-            if (other.gameObject.TryGetComponent(out Storable storable))
-            {
-                var storage = Instantiate(_storageSpace, GetComponentInChildren<GridObjectCollection>().transform, false);
-                storage.GetComponent<Interactable>().OnClick.AddListener(delegate { RemoveItem(storage); });
-                storable.PlaceInInventory(storage);
+            if (!other.gameObject.TryGetComponent(out Storable storable)) return;
+            var storage = Instantiate(_storageSpace);
+            storage.transform.SetParent(GetComponentInChildren<GridObjectCollection>().transform, false);
+            storage.GetComponent<Interactable>().OnClick.AddListener(delegate { RemoveItem(storage); });
+            storable.PlaceInInventory(storage);
 
-                _storedItems.Add(storage, other.gameObject);
+            _storedItems.Add(storage, other.gameObject);
 
-                GetComponentInChildren<GridObjectCollection>().UpdateCollection();
-            }
+            GetComponentInChildren<GridObjectCollection>().UpdateCollection();
+
+            storage.gameObject.GetComponentInChildren<TextMeshPro>().transform.parent.transform.position = Vector3.zero;
         }
 
         private void RemoveItem(GameObject item)

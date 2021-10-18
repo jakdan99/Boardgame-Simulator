@@ -526,6 +526,11 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &324644526 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8869179446479316724, guid: 321d81c521e87e04885f21b3bd1caf9f, type: 3}
+  m_PrefabInstance: {fileID: 4674282346049766511}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &357677499 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5201749956358701078, guid: 6d7a2144cf76941418f21e417ff8330f, type: 3}
@@ -1075,6 +1080,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1610204266}
     m_Modifications:
+    - target: {fileID: 1872938895, guid: b5a6690acd03c22459c68909a15c72c2, type: 3}
+      propertyPath: _gameObject
+      value: 
+      objectReference: {fileID: 324644526}
     - target: {fileID: 4608150572050164969, guid: b5a6690acd03c22459c68909a15c72c2, type: 3}
       propertyPath: _gameObject
       value: 
@@ -1326,10 +1335,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: GameSelector
       objectReference: {fileID: 0}
-    - target: {fileID: 5201749956358701078, guid: 6d7a2144cf76941418f21e417ff8330f, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 5897508476994326703, guid: 6d7a2144cf76941418f21e417ff8330f, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -1374,11 +1379,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7908585029424215856, guid: 6d7a2144cf76941418f21e417ff8330f, type: 3}
-      propertyPath: trackedTargetType
-      value: 6
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 8202511926787879364, guid: 6d7a2144cf76941418f21e417ff8330f, type: 3}
+    - {fileID: 9071099128372482872, guid: 6d7a2144cf76941418f21e417ff8330f, type: 3}
+    - {fileID: 7293036075263746509, guid: 6d7a2144cf76941418f21e417ff8330f, type: 3}
+    - {fileID: 2327162764085379142, guid: 6d7a2144cf76941418f21e417ff8330f, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 6d7a2144cf76941418f21e417ff8330f, type: 3}
 --- !u!4 &4308753730661343898 stripped
 Transform:
@@ -1392,10 +1397,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1610204266}
     m_Modifications:
-    - target: {fileID: 8869179445825148793, guid: 321d81c521e87e04885f21b3bd1caf9f, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -0.1
-      objectReference: {fileID: 0}
     - target: {fileID: 8869179446479316724, guid: 321d81c521e87e04885f21b3bd1caf9f, type: 3}
       propertyPath: m_Name
       value: InventoryMenu

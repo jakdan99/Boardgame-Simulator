@@ -496,7 +496,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2ccd86d247dff554caf9fbb6c2b05938, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _storageSpace: {fileID: 2170347490880027052, guid: 3c98e673d6d91814a8cec6da7fa5eef2, type: 3}
+  _storageSpace: {fileID: 5796479707320591310, guid: b3f1dcac4d586e74b9d2632cb6c24f49, type: 3}
 --- !u!1 &8869179445825148792
 GameObject:
   m_ObjectHideFlags: 0
@@ -521,7 +521,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8869179445825148792}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.05, y: 0.12, z: 0}
+  m_LocalPosition: {x: 0.05, y: 0.12, z: -0.1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 2775656402623244590}
@@ -552,7 +552,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &8869179446479316725
 Transform:
   m_ObjectHideFlags: 0
