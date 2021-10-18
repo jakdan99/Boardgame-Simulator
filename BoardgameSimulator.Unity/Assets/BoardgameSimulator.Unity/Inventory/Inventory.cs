@@ -2,7 +2,6 @@ using Microsoft.MixedReality.Toolkit.UI;
 using Microsoft.MixedReality.Toolkit.Utilities;
 using System;
 using System.Collections.Generic;
-using TMPro;
 using UnityEngine;
 
 namespace BoardgameSimulator.Unity.Inventory
@@ -28,8 +27,6 @@ namespace BoardgameSimulator.Unity.Inventory
             _storedItems.Add(storage, other.gameObject);
 
             GetComponentInChildren<GridObjectCollection>().UpdateCollection();
-
-            storage.gameObject.GetComponentInChildren<TextMeshPro>().transform.parent.transform.position = Vector3.zero;
         }
 
         private void RemoveItem(GameObject item)

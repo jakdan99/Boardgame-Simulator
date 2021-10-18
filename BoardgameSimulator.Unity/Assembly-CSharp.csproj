@@ -56,23 +56,16 @@
     <Analyzer Include="C:\Program Files (x86)\Microsoft Visual Studio Tools for Unity\16.0\Analyzers\Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\BoardgameSimulator.Unity\HandMenus\SwitchActiveState.cs" />
-    <Compile Include="Assets\BoardgameSimulator.Unity\Inventory\Storable.cs" />
-    <Compile Include="Assets\BoardgameSimulator.Unity\Inventory\Inventory.cs" />
     <Compile Include="Assets\Samples\Mixed Reality Toolkit Examples\2.7.2\Demos - ScrollingObjectCollection\Scripts\ScrollableListPopulator.cs" />
     <Compile Include="Assets\Samples\Mixed Reality Toolkit Examples\2.7.2\Demos - ScrollingObjectCollection\Scripts\ScrollablePagination.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
-    <None Include="Assets\BoardgameSimulator.Unity\MRTK\Shaders\Text3DShader.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
-    <None Include="Assets\BoardgameSimulator.Unity\MRTK\Shaders\InstancedColored.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader" />
-    <None Include="Assets\BoardgameSimulator.Unity\MRTK\Shaders\ChannelPacker.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMPro_Mobile.cginc" />
     <None Include="Assets\MixedRealityToolkit.Generated\link.xml" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF SSD.shader" />
-    <None Include="Assets\BoardgameSimulator.Unity\MRTK\Shaders\InvisibleShader.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Surface-Mobile.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Surface.shader" />
     <None Include="Assets\TextMesh Pro\Sprites\EmojiOne Attribution.txt" />
@@ -83,17 +76,12 @@
     <None Include="Assets\TextMesh Pro\Shaders\TMPro_Properties.cginc" />
     <None Include="Assets\TextMesh Pro\Shaders\TMPro_Surface.cginc" />
     <None Include="Assets\TextMesh Pro\Resources\LineBreaking Following Characters.txt" />
-    <None Include="Assets\BoardgameSimulator.Unity\MRTK\Shaders\MixedRealityStandard.shader" />
-    <None Include="Assets\BoardgameSimulator.Unity\MRTK\Shaders\MixedRealityTextMeshPro.shader" />
-    <None Include="Assets\BoardgameSimulator.Unity\MRTK\Shaders\MRTK_Wireframe.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Masking.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF Overlay.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap-Mobile.shader" />
     <None Include="Assets\TextMesh Pro\Fonts\LiberationSans - OFL.txt" />
-    <None Include="Assets\BoardgameSimulator.Unity\MRTK\Shaders\DepthBufferPostProcess.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_Sprite.shader" />
-    <None Include="Assets\BoardgameSimulator.Unity\MRTK\Shaders\MixedRealityShaderUtils.cginc" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
@@ -930,8 +918,18 @@
     <Reference Include="Microsoft.MixedReality.Toolkit.StandardAssets.Editor">
       <HintPath>Library\ScriptAssemblies\Microsoft.MixedReality.Toolkit.StandardAssets.Editor.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.SpatialAudio.Spatializer">
+      <HintPath>Library\ScriptAssemblies\Microsoft.SpatialAudio.Spatializer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SpatialAudio.Spatializer.Editor">
+      <HintPath>Library\ScriptAssemblies\Microsoft.SpatialAudio.Spatializer.Editor.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="BoardgameSimulator.Unity.csproj">
+      <Project>{72F6C378-97DB-4EA3-C5F7-3235164DEF40}</Project>
+      <Name>BoardgameSimulator.Unity</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="GenerateTargetFrameworkMonikerAttribute" />

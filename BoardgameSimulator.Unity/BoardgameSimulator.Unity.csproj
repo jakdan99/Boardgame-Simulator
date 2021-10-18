@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
-    <LangVersion>latest</LangVersion>
+    <LangVersion>8.0</LangVersion>
     <Nullable>enable</Nullable>
   </PropertyGroup>
   <PropertyGroup>
@@ -54,7 +54,12 @@
     <UnityVersion>2021.1.24f1</UnityVersion>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="Assets\BoardgameSimulator.Unity\HandMenus\GameSelector.cs" />
+    <Analyzer Include="C:\Program Files (x86)\Microsoft Visual Studio Tools for Unity\16.0\Analyzers\Microsoft.Unity.Analyzers.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Assets\BoardgameSimulator.Unity\HandMenus\SwitchActiveState.cs" />
+    <Compile Include="Assets\BoardgameSimulator.Unity\Inventory\Storable.cs" />
+    <Compile Include="Assets\BoardgameSimulator.Unity\Inventory\Inventory.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\BoardgameSimulator.Unity\MRTK\Shaders\Text3DShader.shader" />
@@ -675,14 +680,20 @@
     <Reference Include="System.Xml.XPath.XDocument">
       <HintPath>C:\Program Files\Unity\Hub\Editor\2021.1.24f1\Editor\Data\MonoBleedingEdge\lib\mono\4.7.1-api\Facades\System.Xml.XPath.XDocument.dll</HintPath>
     </Reference>
+    <Reference Include="Unity.TextMeshPro">
+      <HintPath>Library\ScriptAssemblies\Unity.TextMeshPro.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.MixedReality.Toolkit.SDK">
+      <HintPath>Library\ScriptAssemblies\Microsoft.MixedReality.Toolkit.SDK.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.MixedReality.Toolkit.Tools">
+      <HintPath>Library\ScriptAssemblies\Microsoft.MixedReality.Toolkit.Tools.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.MixedReality.OpenXR">
       <HintPath>Library\ScriptAssemblies\Microsoft.MixedReality.OpenXR.dll</HintPath>
     </Reference>
-    <Reference Include="Microsoft.MixedReality.Toolkit.Providers.OpenXR">
-      <HintPath>Library\ScriptAssemblies\Microsoft.MixedReality.Toolkit.Providers.OpenXR.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.MixedReality.Toolkit.Services.InputSystem">
-      <HintPath>Library\ScriptAssemblies\Microsoft.MixedReality.Toolkit.Services.InputSystem.dll</HintPath>
+    <Reference Include="Microsoft.MixedReality.Toolkit">
+      <HintPath>Library\ScriptAssemblies\Microsoft.MixedReality.Toolkit.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.UI">
       <HintPath>Library\ScriptAssemblies\UnityEditor.UI.dll</HintPath>
