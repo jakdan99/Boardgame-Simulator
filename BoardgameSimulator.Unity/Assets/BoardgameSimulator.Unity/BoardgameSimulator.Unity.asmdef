@@ -1,11 +1,13 @@
 {
     "name": "BoardgameSimulator.Unity",
+    "rootNamespace": "",
     "references": [
         "Unity.TextMeshPro",
         "Microsoft.MixedReality.Toolkit.SDK",
         "Microsoft.MixedReality.Toolkit.Tools",
         "Microsoft.MixedReality.OpenXR",
-        "Microsoft.MixedReality.Toolkit"
+        "Microsoft.MixedReality.Toolkit",
+        "DOTween.Modules"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],
