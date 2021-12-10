@@ -53,20 +53,33 @@
     <UnityVersion>2021.1.27f1</UnityVersion>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="Assets\BoardgameSimulator.Unity\Boardgames\GazdOkos\Die.cs" />
     <Compile Include="Assets\BoardgameSimulator.Unity\HandMenus\SwitchActiveState.cs" />
+    <Compile Include="Assets\BoardgameSimulator.Unity\Boardgames\DeckOfCards\DeckOfCards.cs" />
+    <Compile Include="Assets\BoardgameSimulator.Unity\Boardgames\GazdOkos\Gameplay.cs" />
+    <Compile Include="Assets\BoardgameSimulator.Unity\Boardgames\GazdOkos\Money.cs" />
     <Compile Include="Assets\BoardgameSimulator.Unity\Inventory\Storable.cs" />
     <Compile Include="Assets\BoardgameSimulator.Unity\Inventory\Inventory.cs" />
+    <Compile Include="Assets\BoardgameSimulator.Unity\Boardgames\GazdOkos\MoneyCounter.cs" />
     <Compile Include="Assets\BoardgameSimulator.Unity\Boardgames\GazdOkos\Szerencse\LuckyDeck.cs" />
+    <Compile Include="Assets\BoardgameSimulator.Unity\HandMenus\GameSelector.cs" />
+    <Compile Include="Assets\BoardgameSimulator.Unity\Boardgames\PlaceGames.cs" />
+    <Compile Include="Assets\BoardgameSimulator.Unity\Boardgames\GazdOkos\ActionPanelActions.cs" />
+    <Compile Include="Assets\BoardgameSimulator.Unity\Boardgames\GazdOkos\PlayerProperties.cs" />
+    <Compile Include="Assets\BoardgameSimulator.Unity\Boardgames\GazdOkos\PropertyVisualizer.cs" />
+    <Compile Include="Assets\BoardgameSimulator.Unity\HandMenus\ClearGamePieces.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\BoardgameSimulator.Unity\MRTK\Shaders\Text3DShader.shader" />
     <None Include="Assets\BoardgameSimulator.Unity\MRTK\Shaders\InstancedColored.shader" />
     <None Include="Assets\BoardgameSimulator.Unity\MRTK\Shaders\ChannelPacker.shader" />
     <None Include="Assets\BoardgameSimulator.Unity\MRTK\Shaders\InvisibleShader.shader" />
+    <None Include="Assets\BoardgameSimulator.Unity\Boardgames\GazdOkos\Furnitures\TV\readme.txt" />
     <None Include="Assets\BoardgameSimulator.Unity\BoardgameSimulator.Unity.asmdef" />
     <None Include="Assets\BoardgameSimulator.Unity\MRTK\Shaders\MixedRealityStandard.shader" />
     <None Include="Assets\BoardgameSimulator.Unity\MRTK\Shaders\MixedRealityTextMeshPro.shader" />
     <None Include="Assets\BoardgameSimulator.Unity\MRTK\Shaders\MRTK_Wireframe.shader" />
+    <None Include="Assets\BoardgameSimulator.Unity\Boardgames\DeckOfCards\Image Effects\Shaders\Reversibl_Draw.shader" />
     <None Include="Assets\BoardgameSimulator.Unity\MRTK\Shaders\DepthBufferPostProcess.shader" />
     <None Include="Assets\BoardgameSimulator.Unity\MRTK\Shaders\MixedRealityShaderUtils.cginc" />
   </ItemGroup>
@@ -329,11 +342,11 @@
     <Reference Include="unityplastic">
       <HintPath>Library\PackageCache\com.unity.collab-proxy@1.13.5\Lib\Editor\PlasticSCM\unityplastic.dll</HintPath>
     </Reference>
-    <Reference Include="Unity.VisualScripting.Antlr3.Runtime">
-      <HintPath>Library\PackageCache\com.unity.visualscripting@1.6.1\Runtime\VisualScripting.Flow\Dependencies\NCalc\Unity.VisualScripting.Antlr3.Runtime.dll</HintPath>
-    </Reference>
     <Reference Include="DOTween">
       <HintPath>Library\PackageCache\com.demigiant.dotween@1.2.632\DOTween\Plugins\DOTween.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.VisualScripting.Antlr3.Runtime">
+      <HintPath>Library\PackageCache\com.unity.visualscripting@1.6.1\Runtime\VisualScripting.Flow\Dependencies\NCalc\Unity.VisualScripting.Antlr3.Runtime.dll</HintPath>
     </Reference>
     <Reference Include="DOTweenEditor">
       <HintPath>Library\PackageCache\com.demigiant.dotween@1.2.632\DOTween\Plugins\Editor\DOTweenEditor.dll</HintPath>
@@ -703,6 +716,12 @@
     </Reference>
     <Reference Include="DOTween.Modules">
       <HintPath>Library\ScriptAssemblies\DOTween.Modules.dll</HintPath>
+    </Reference>
+    <Reference Include="UniTask">
+      <HintPath>Library\ScriptAssemblies\UniTask.dll</HintPath>
+    </Reference>
+    <Reference Include="UniTask.DOTween">
+      <HintPath>Library\ScriptAssemblies\UniTask.DOTween.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.UI">
       <HintPath>Library\ScriptAssemblies\UnityEditor.UI.dll</HintPath>

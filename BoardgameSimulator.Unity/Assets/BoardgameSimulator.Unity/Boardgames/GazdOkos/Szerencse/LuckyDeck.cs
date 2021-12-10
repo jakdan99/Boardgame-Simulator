@@ -1,36 +1,27 @@
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using DG.Tweening;
-using UnityEngine;
 
 namespace BoardgameSimulator.Unity.Boardgames.GazdOkos.Szerencse
 {
-    public class LuckyDeck : MonoBehaviour
+    public class LuckyDeck
     {
-        [SerializeField] private List<Texture> _cardTextures = default!;
-        [SerializeField] private GameObject _cardTemplate = default!;
+        private List<int> _luckyCards = new List<int>();
+        private List<int> _shuffledCards = new List<int>();
 
-        private void Awake()
+        public LuckyDeck()
         {
-            if (_cardTextures == null || _cardTextures.Count == 0)
+            for (int i = 0; i < 7; ++i)
             {
-                throw new InvalidOperationException("Card textures should not be null");
+                _luckyCards.Add(i);
             }
 
-            if (_cardTemplate == null)
-            {
-                throw new InvalidOperationException("Card template should not be null");
-            }
+            _shuffledCards = _luckyCards;
 
-            Shuffle(_cardTextures);
-
-            DrawCard();
+            Shuffle(_shuffledCards);
         }
 
         private void Shuffle<T>(List<T> list)
         {
-            System.Random random = new System.Random();
+            var random = new System.Random();
             var n = list.Count;
             while (n > 1)
             {
@@ -40,19 +31,18 @@ namespace BoardgameSimulator.Unity.Boardgames.GazdOkos.Szerencse
             }
         }
 
-        public void DrawCard()
+        public int DrawCard()
         {
-            if (_cardTextures.Count != 0)
+            if (_shuffledCards.Count == 0)
             {
-                var card = Instantiate(_cardTemplate, transform.position, Quaternion.identity);
-
-                card.GetComponent<MeshRenderer>().material.mainTexture = _cardTextures[0];
-
-                _cardTextures.RemoveAt(0);
-
-                card.transform.DOMove(Camera.main.transform.localPosition + (0.2f * Camera.main.transform.forward), 2.0f).Play();
-                card.transform.DORotate(new Vector3(-90, 90, 90) + Camera.main.transform.rotation.eulerAngles, 2.0f, RotateMode.Fast).Play();
+                _shuffledCards = _luckyCards;
+                Shuffle(_shuffledCards);
             }
+
+            var result = _shuffledCards[0];
+            _shuffledCards.RemoveAt(0);
+
+            return result;
         }
     }
 }

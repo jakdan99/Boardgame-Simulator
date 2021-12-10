@@ -35,5 +35,15 @@ namespace BoardgameSimulator.Unity.Inventory
             Destroy(item);
             GetComponentInChildren<GridObjectCollection>().UpdateCollection();
         }
+
+        public void RemoveAll()
+        {
+            foreach (var item in _storedItems)
+            {
+                Destroy(item.Key);
+                Destroy(item.Value);
+            }
+            GetComponentInChildren<GridObjectCollection>().UpdateCollection();
+        }
     }
 }
