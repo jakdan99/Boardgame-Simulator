@@ -140,7 +140,6 @@ PlayerSettings:
   - {fileID: 0}
   - {fileID: 3600015825284244394, guid: 7052b5d6dae991044a4091685ecf954a, type: 2}
   - {fileID: -5013557473436865088, guid: 1da82f2318f1bb84e9c437523f784c9d, type: 2}
-  - {fileID: 0}
   metroInputSource: 0
   wsaTransparentSwapchain: 0
   m_HolographicPauseOnTrackingLoss: 1
@@ -616,11 +615,11 @@ PlayerSettings:
   m_MobileRenderingPath: 1
   metroPackageName: BoardgameSimulator
   metroPackageVersion: 1.0.0.0
-  metroCertificatePath: 
+  metroCertificatePath: D:\Uni\Boardgame-Simulator\BoardgameSimulator.Unity\Assets\WSATestCertificate.pfx
   metroCertificatePassword: 
-  metroCertificateSubject: 
-  metroCertificateIssuer: 
-  metroCertificateNotAfter: 0000000000000000
+  metroCertificateSubject: DefaultCompany
+  metroCertificateIssuer: DefaultCompany
+  metroCertificateNotAfter: 00a85c588a0bd901
   metroApplicationDescription: Template_3D
   wsaImages: {}
   metroTileShortName: Boardgame Simulator
